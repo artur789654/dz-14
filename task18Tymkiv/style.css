@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body .clock {
+  margin: 50px auto;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background: radial-gradient(circle at center, #333, #333 2%, #eee 5%, rgb(251, 135, 63) 20%, rgb(37, 182, 255) 100%);
+  border-radius: 50%;
+  position: relative;
+}
+body .clock .hour {
+  width: 2px;
+  height: 60px;
+  background: linear-gradient(#333 2%, white 15%, grey 40%, black);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  transform-origin: top center;
+  animation: anim infinite linear;
+  animation-duration: 43200s;
+}
+body .clock .minute {
+  width: 2px;
+  height: 70px;
+  background: linear-gradient(#333 2%, white 15%, grey 40%, black);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  transform-origin: top center;
+  animation: anim infinite linear;
+  animation-duration: 3600s;
+}
+body .clock .second {
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(#333 2%, white 15%, grey 40%, black);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  transform-origin: top center;
+  animation: anim infinite linear;
+  animation-duration: 60s;
+}
+@keyframes anim {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */
